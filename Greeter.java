@@ -17,6 +17,11 @@ public class Greeter {
   }
 
   public static void main(String[] args) {
+    // Check if the correct number of command-line arguments is provided
+    if (args.length != 3) {
+      System.out.println("Usage: java Greeter <language> <country> <name>");
+      return; // Exit the program gracefully
+    }
     String language = args[0];
     String country = args[1];
     String name = args[2];
